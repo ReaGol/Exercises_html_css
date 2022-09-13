@@ -1,0 +1,15 @@
+#container {
+    background-color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+#container div {
+    width: 100px;
+    height: 200px;
+    flex-basis: 200px;
+}
