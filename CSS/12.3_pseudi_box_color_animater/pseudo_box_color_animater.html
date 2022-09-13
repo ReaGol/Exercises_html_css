@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box color</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .parent-box {
+            width: 500px;
+            height: 500px;
+            background: blueviolet;
+            position: relative;
+        }
+      
+        div::after {
+            content: '';
+            position: absolute;
+            background: red;
+            width: 50%;
+            height: 100%;
+        }
+        div:hover::after {
+            background: orange;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="parent-box"><div class="child-box"></div></div>
+    
+    
+</body>
+</html>
