@@ -42,12 +42,20 @@ body {
 
 @media (max-width: 500px) {
     .navbar {
-        position: absolute;
-        top: 0.75rem;
-        display: flex;
         flex-direction: column;
-        justify-content: space-between;
- 
+        align-items: center;
+    }
+    .navbar-links ul {
+       width: 100%;
+       flex-direction: column;
+    }
+    .navbar-links li {
+        align-items: center;
+    }
+    .navbar-links li a {
+        padding: 1rem;
+    }
+        
 }
 
 
