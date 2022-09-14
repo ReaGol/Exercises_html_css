@@ -43,6 +43,8 @@
         .box-1:hover::after {
             transform: translateY(100%);
             background: red;
+            content: 'COOL';
+            line-height: 4rem;
             
             
         }
@@ -61,7 +63,7 @@
             position: absolute;
             left:-242px;
             transform: translateX();
-            transition: 2.5s ease-in-out all;
+            transition: 1s ease-in-out all;
             background: blue;
             
             
@@ -89,9 +91,10 @@
             width: 102%;
             height: 100%;
             position: absolute;
-            transform: rotate(0);
+            transform: rotate(90deg);
             left: -4px;
-            transition: 2.5s ease-in-out all;
+            transform-origin: left top;
+            transition: 1s ease-in-out all;
             background: none;
             
             
@@ -99,7 +102,7 @@
 
 
         .box-3:hover::after {
-            transform: rotate(180deg);
+            transform: rotate(0);
             background: yellow;
             
             
@@ -119,7 +122,7 @@
             position: absolute;
             transform: scale(0);
             left: 1px;
-            transition: 2.5s ease-in-out all;
+            transition: 1s ease-in-out all;
             background: none;
             
             
@@ -149,7 +152,7 @@
             position: absolute;
             transform: skew(0deg);
             left: 1px;
-            transition: 2.5s ease-in-out all;
+            transition: 1s ease-in-out all;
             background: none;
             
             
