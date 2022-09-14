@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple transition</title>
+    <style>
+        body {
+            background: white;
+            max-width: 70%;
+            height: 70%;
+        }
+        .box {
+            background: blue;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        .box::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: 1.5s ease-in-out all;
+            transform: translateX(100%);
+            background: grey;
+        }
+
+        .box:hover::after {
+            transform: translateX(0);
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
