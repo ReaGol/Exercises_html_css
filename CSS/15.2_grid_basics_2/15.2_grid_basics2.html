@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid Basics 2</title>
+    <style>
+         * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: grid;
+        height: 100vh;
+        padding: 1rem;
+        border: 2px solid #ddd;
+        grid-template-columns: minmax(10px, 50px);
+        grid-auto-rows: 100px;
+        gap: 5px;
+        grid-template-areas:
+          'header header'
+          'main sidebar'
+          'footer1 footer2';
+        
+      }
+
+      .header,
+      .main,
+      .sidebar,
+      .footer {
+        border: 1px #ccc solid;
+        padding: 0.5rem;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .main {
+        grid-area: main;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+      }
+
+      .footer1 {
+        grid-area: footer1;
+    
+      }
+       .footer2 {
+        grid-area: footer2;
+    
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header"></header>
+      <section class="main"></section>
+      <aside class="sidebar"></aside>
+      <footer class="footer1"></footer>
+      <footer class="footer2"></footer>
+    </div>
+  </body>
+</html>
