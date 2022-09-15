@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid Columns</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+    
+      .container {
+        display: grid;
+        height: 100vh;
+        padding: 1rem;
+        border: 2px solid #ddd;
+        grid-template-columns: minmax(10px, 50px);
+        grid-auto-rows: 100px;
+        gap: 5px;
+        grid-template-areas:
+          'item1 item2'
+          'item3 item4'
+          'item5';
+        
+        }
+      .item1 {
+        grid-area: item1;
+        padding: 3rem;
+        background: rgba(109, 253, 164, 0.703);
+        border: #ccc 1px solid;
+        grid-column: 1 / span 8;
+        grid-row: 1 / span 1;
+       
+      }
+      .item2 {
+        grid-area: item2;
+        padding: 3rem;
+        background: rgb(70, 184, 97);
+        border: #ccc 1px solid;
+        grid-column: 9 / span 8;
+        grid-row: 1 / span 1;
+      }
+      .item3 {
+        grid-area: item3;
+        padding: 3rem;
+        background: rgb(15, 151, 131);
+        border: #ccc 1px solid;
+        grid-column: 6 / span 11;
+        grid-row: 2 / span 1;
+      }
+      .item4 {
+        grid-area: item4;
+        padding: 3rem;
+        background: rgb(22, 97, 150);
+        border: #ccc 1px solid;
+        grid-column: 1 / span 5;
+        grid-row: 2 / span 1;
+      }
+      .item5 {
+        grid-area: item5;
+        padding: 3rem;
+        background: cadetblue;
+        border: #ccc 1px solid;
+        grid-column: 1 / span 16;
+        grid-row: 3 / span 1;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item1"></div>
+      <div class="item2"></div>
+      <div class="item3"></div>
+      <div class="item4"></div>
+      <div class="item5"></div>
+     
+    </div>
+
+  </body>
+</html>
