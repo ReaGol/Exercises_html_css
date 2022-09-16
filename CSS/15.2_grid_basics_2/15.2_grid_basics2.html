@@ -16,9 +16,8 @@
         height: 100vh;
         padding: 1rem;
         border: 2px solid #ddd;
-        grid-template-columns: minmax(10px, 50px);
-        grid-auto-rows: 100px;
-        gap: 5px;
+        grid-template-columns: 200px 200px;
+        gap: 10px;
         grid-template-areas:
           'header header'
           'main sidebar'
@@ -29,29 +28,55 @@
       .header,
       .main,
       .sidebar,
-      .footer {
-        border: 1px #ccc solid;
+      .footer1,
+      .footer2 {
+        /* border: 1px rgb(32, 32, 32) solid; */
         padding: 0.5rem;
+        border-radius: 5%;
       }
 
       .header {
         grid-area: header;
+        grid-area: sidebar;
+        display: grid;
+        grid-column: 1 / span 5;
+        grid-row: 1 / span 1;
+        background: red;
       }
 
       .main {
         grid-area: main;
+        display: grid;
+        grid-column: 1 / span 3;
+        grid-row: 2 / span 2;
+        gap: 1.5rem;
+        background: blue;
       }
 
       .sidebar {
         grid-area: sidebar;
+        display: grid;
+        grid-column: 4 / span 2;
+        grid-row: 2 / span 1;
+        background: green;
       }
 
       .footer1 {
         grid-area: footer1;
+        grid-area: sidebar;
+        display: grid;
+        grid-column: 4 / span 1;
+        grid-row: 3 / span 1;
+        background: purple;
     
       }
        .footer2 {
         grid-area: footer2;
+        grid-area: sidebar;
+        display: grid;
+        grid-column: 5 / span 1;
+        grid-row: 3 / span 1;
+        background: purple;
     
       }
     </style>
