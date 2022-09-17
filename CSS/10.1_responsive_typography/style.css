@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #ddd;
+    color: rgb(118, 118, 235);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: calc(14px + (36 - 14) * ((100vw - 200px) / (1200 - 200)));
+}
+
+.container {
+    margin: 120px auto;
+}
+
+h2 {
+    margin: 100px;
+}
+ /* formula: font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
