@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinners</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background: black;
+            flex: 1;
+        }
+
+        .container {
+            padding:100px;
+            /* margin: 100px; */
+        }
+        .spinner1 {
+
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, transperant,transperant 40deg, #ffa500);
+            animation: spinner-1 1.2s linear infinite;
+        }
+
+          @keyframes spinner-1 {
+            to {
+                transform:rotate(1turn)
+            }
+        }
+         .spinner-1::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, transperant,transperant 40deg, #ffa500);
+            border-radius: 50%;
+            z-index: 1000;
+            z-index: 1;
+            filter: blur(30px);
+            animation: spinner-1 1.2s linear infinite;
+         }
+        .spinner1::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 2px solid #ddd;
+            border-top-color: #ffa500;
+            border-radius: 50%;
+            animation: spinner-1 1.2s linear infinite;
+        }
+      
+
+    </style>
+      </head>
+  <body>
+    <div class="container">
+      <div class="spinner1 item"></div>
+      <div class="spinner2 item"></div>
+      <div class="item3 item"></div>
+      <div class="item4 item"></div>
+    </div>
+  </body>
+</html>
